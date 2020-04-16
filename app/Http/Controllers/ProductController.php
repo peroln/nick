@@ -131,9 +131,9 @@ class ProductController extends Controller
     {
         $request = $this->service->indexQuery($request);
 
-        Mail::to(User::find(1))
+        Mail::cc(['alexander@webscribble.com'])
             ->queue(new ProductReport($request->get()));
-        //        return  (new ProductReport($request->get()))->render();
+//                return  (new ProductReport($request->get()))->render();
         Session::flash('message', 'Successfully send product!');
         return redirect()->back();
     }
