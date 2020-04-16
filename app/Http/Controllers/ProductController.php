@@ -118,7 +118,9 @@ class ProductController extends Controller
     }
 
     /**
-     *
+     * @param ProductIndexQuery $request
+     * @return string
+     * @throws \ReflectionException
      */
     public function ship(ProductIndexQuery $request)
     {
@@ -126,7 +128,7 @@ class ProductController extends Controller
 
         Mail::to(User::find(1))
             ->queue(new ProductReport($request->get()));
-
-        return  (new ProductReport($request->get()))->render();;
+        //        return  (new ProductReport($request->get()))->render();
+        return redirect()->back();
     }
 }
