@@ -203,7 +203,11 @@ class CommonService
         return $chart;
     }
 
-    private function setColorChart($client_id)
+    /**
+     * @param $client_id
+     * @return array
+     */
+    private function setColorChart($client_id): array
     {
         switch ($client_id) {
             case 1:
