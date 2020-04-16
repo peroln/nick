@@ -129,6 +129,7 @@ class ProductController extends Controller
         Mail::to(User::find(1))
             ->queue(new ProductReport($request->get()));
         //        return  (new ProductReport($request->get()))->render();
+        Session::flash('message', 'Successfully send product!');
         return redirect()->back();
     }
 }
