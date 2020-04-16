@@ -1,6 +1,6 @@
 <div class="mt-5">
     <div class="form-group">
-    <a href="{{route('report',['area' => old('area'), 'keyword' => old('keyword')])}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+    <a href="{{route('report',['area' => old('area'), 'keyword' => old('keyword')])}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Send report</a>
     </div>
     <table class="table table-dark " id="nicksTable">
 
