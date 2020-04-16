@@ -32,7 +32,12 @@ class ProductController extends Controller
     {
         $options = config('options');
         $query = $this->service->indexQuery($request);
-        $chart = $this->service->chart($query->get());
+        if($request->has('common')){
+            $chart = $this->service->chart($query->get(), false);
+        }else{
+            $chart = $this->service->chart($query->get());
+        }
+
         $products = $query->paginate(15)->appends(request()->query());
         $request->flash();
 

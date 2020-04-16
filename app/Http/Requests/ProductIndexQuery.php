@@ -29,7 +29,8 @@ class ProductIndexQuery extends FormRequest
         });
         return [
             'area' => ['nullable', 'string', Rule::in($array)],
-            'keyword' => 'nullable|string'
+            'keyword' => 'nullable|string',
+            'common' => 'nullable|string'
         ];
     }
 }

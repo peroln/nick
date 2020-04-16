@@ -1,5 +1,5 @@
 <div class="mt-5">
-    <form class="form" action="{{route('product.index')}}"  method="GET">
+    <form class="form" action="{{route('product.index')}}" method="GET">
         @csrf
         <div class="row">
             <div class="col">
@@ -23,5 +23,21 @@
                 <button type="submit" class="btn btn-primary mb-2 btn-block">Search</button>
             </div>
         </div>
+        <div class="row">
+            <div class="col ml-3">
+                <div class=" pl-2">
+                    @if(old('common'))
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck" name="common" checked>
+                    @else
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck" name="common">
+                    @endif
+
+                    <label class="form-check-label" for="autoSizingCheck">
+                        Common chart
+                    </label>
+                </div>
+            </div>
+        </div>
+
     </form>
 </div>
