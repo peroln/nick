@@ -1,6 +1,6 @@
 <div class="mt-5">
     <form class="form" action="{{route('product.index')}}" method="GET">
-        @csrf
+{{--        @csrf--}}
         <div class="row">
             <div class="col">
                 <input type="text" name="keyword" class="form-control" id="keyword" value="{{ old('keyword') }}"

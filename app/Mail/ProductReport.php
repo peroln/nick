@@ -31,6 +31,6 @@ class ProductReport extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.reports.products');
+        return $this->view('emails.reports.products');
     }
 }
